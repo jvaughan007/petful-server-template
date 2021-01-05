@@ -5,7 +5,7 @@ const { CLIENT_ORIGIN } = require('../../config.js');
 
 app.use(
     cors({
-        origin: CLIENT_ORIGIN || 'http://localhost:3000'
+        origin: CLIENT_ORIGIN
     })
 );
 
