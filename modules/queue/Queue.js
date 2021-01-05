@@ -29,9 +29,11 @@ class Queue {
     dequeue() {
     // Remove some data from the queue.
         if (!this.isEmpty()) {
-            return this.queue.head.data;
+            const data = this.queue.removeHead();
+            this.size--;
+            return data;
         } else {
-            return null;
+            throw new Error('Queue is empty');
         }
     }
 
